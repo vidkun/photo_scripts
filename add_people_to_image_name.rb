@@ -1,5 +1,16 @@
+#
+# Author: vidkun
+# Date: 20150421
+#
+# This script will pull the exif data image files in the directory specified, 
+# check for a subjects tag, and add the name of all subjects to the end of
+# the image's filename
+#
+# Must install the mini_exiftool gem first: gem install mini_exiftool
+#
+# Usage: add_people_to_image_name.rb "/the/path/to/my/target/directory"
+#
 require 'mini_exiftool'
-require 'pry'
 
 IMAGE_EXTENSIONS = [ '.jpg', '.jpeg', '.gif', '.bmp', '.png', '.tiff' ]
 # Get command line options to pull in target dir
